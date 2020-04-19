@@ -39,7 +39,7 @@
     <span class="badge badge-pill badge-success mb-3">Rp. <?php echo number_format($brg->harga, 0,',','.')  ?></span><br>
     <?php echo anchor('Dashboard/tambah_ke_keranjang/' .$brg->id_brg, '<div class="btn btn-sm btn-primary">Tambah Keranjang</div>') ?>
 
-    <?php echo anchor('Dashboard/detail/' .$brg->id_brg, '<div class="btn btn-sm btn-success">Detail</div>') ?>
+    <?php echo anchor('Dashboard_akhir/detail/' .$brg->id_brg, '<div class="btn btn-sm btn-success">Detail</div>') ?>
   </div>
 </div>
 

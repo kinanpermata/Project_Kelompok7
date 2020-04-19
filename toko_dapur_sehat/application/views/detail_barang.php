@@ -40,7 +40,7 @@
 
                 <?php echo anchor('Dashboard/tambah_ke_keranjang/' .$brg->id_brg, '<div class="btn btn-sm btn-primary">Tambah Keranjang</div>') ?>
 
-                <?php echo anchor('Dashboard/index/' .$brg->id_brg, '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
+                <?php echo anchor('Dashboard_akhir/index/' .$brg->id_brg, '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
             </div>
         </div>
         <?php endforeach; ?>

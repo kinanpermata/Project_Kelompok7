@@ -4,13 +4,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 
-    public function index()
+    public function __construct()
     {
-        $data['barang'] = $this->Model_barang->tampil_data()->result();
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
-        $this->load->view('Dashboard', $data);
-        $this->load->view('templates/footer');
+        parent::__construct();
+        if ($this->session->userdata('role_id') != '2') {
+            $this->session->set_flashdata('pesan' ,'<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Anda Belum Login
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        
+        redirect('Auth/login');
+        
+        }
     }
 
     public function tambah_ke_keranjang($id){
@@ -25,7 +32,7 @@ class Dashboard extends CI_Controller {
 
     $this->cart->insert($data);
 
-    redirect('Dashboard');
+    redirect('Dashboard_akhir');
 
     }
 
@@ -38,7 +45,7 @@ class Dashboard extends CI_Controller {
 
     public function hapus_keranjang(){
         $this->cart->destroy();
-        redirect('Dashboard/index');
+        redirect('Dashboard_akhir');
     }
 
     public function pembayaran(){
@@ -59,15 +66,6 @@ class Dashboard extends CI_Controller {
         } else{
             echo "Maaf, Pesanan Anda Gagal diproses!";
         }
-    }
-
-    public function detail($id_brg)
-    {
-        $data['barang'] = $this->Model_barang->detail_barang($id_brg);
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
-        $this->load->view('detail_barang', $data);
-        $this->load->view('templates/footer');
     }
 
 }
