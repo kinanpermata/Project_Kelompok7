@@ -22,7 +22,7 @@
             <td align="right">Rp. <?php  echo number_format($items['subtotal'], 0,',','.')  ?></td>
         </tr>
 
-        
+
     <?php endforeach;?>
 
     <tr>

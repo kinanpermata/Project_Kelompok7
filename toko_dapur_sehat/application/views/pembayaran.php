@@ -31,17 +31,17 @@
                 <div class="form-group">
                     <label>Jasa Pengiriman</label>
                     <select class="form-control">
-                        <option>JNE</option>         
-                        <option>GOJEK</option>    
-                        <OPTION>GRAB</OPTION>       
+                        <option>JNE</option>
+                        <option>GOJEK</option>
+                        <OPTION>GRAB</OPTION>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Pilih Bank </label>
                     <select class="form-control">
-                        <option>BCA - 1234565432</option>         
-                        <option>OVO - 123455432</option>         
+                        <option>BCA - 1234565432</option>
+                        <option>OVO - 123455432</option>
                     </select>
                 </div>
 
@@ -49,12 +49,12 @@
 
 
             </form>
-            <?php 
+            <?php
             }else  echo "<h4>Keranjang Belanja Anda masih kosong !"
-            ?> 
+            ?>
         </div>
 
-        
+
         <div class="col-md-2"></div>
     </div>
 

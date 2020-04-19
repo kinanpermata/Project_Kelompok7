@@ -1,27 +1,18 @@
-<?php 
+<?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 
-    public function __construct()
+    public function index()
     {
-        parent::__construct();
-
-        if($this->session->userdata('role_id') != '2'){
-            $this->session->set_flashdata('pesan', '<div 
-                    class="alert alert-danger alert-dismissible fade show" 
-                    role="alert">
-                Anda belum Login!
-                <button type="button" class="close" 
-                    data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>');
-            redirect('auth/login');
-        }
+        $data['barang'] = $this->Model_barang->tampil_data()->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('Dashboard', $data);
+        $this->load->view('templates/footer');
     }
-    
+
     public function tambah_ke_keranjang($id){
         $barang = $this->Model_barang->find($id);
         $data = array(
@@ -29,13 +20,13 @@ class Dashboard extends CI_Controller {
             'qty'     => 1,
             'price'   => $barang->harga,
             'name'    => $barang->nama_brg
-            
+
     );
-    
+
     $this->cart->insert($data);
-    
-    redirect('Welcome');
-    
+
+    redirect('Dashboard');
+
     }
 
     public function detail_keranjang(){
@@ -47,7 +38,7 @@ class Dashboard extends CI_Controller {
 
     public function hapus_keranjang(){
         $this->cart->destroy();
-        redirect('Welcome');
+        redirect('Dashboard/index');
     }
 
     public function pembayaran(){
@@ -58,10 +49,24 @@ class Dashboard extends CI_Controller {
     }
 
     public function proses_pesanan(){
-        $this->cart->destroy();
+        $is_processed = $this->Model_invoice->index();
+        if($is_processed){
+            $this->cart->destroy();
+            $this->load->view('templates/header');
+            $this->load->view('templates/sidebar');
+            $this->load->view('proses_pesanan');
+            $this->load->view('templates/footer');
+        } else{
+            echo "Maaf, Pesanan Anda Gagal diproses!";
+        }
+    }
+
+    public function detail($id_brg)
+    {
+        $data['barang'] = $this->Model_barang->detail_barang($id_brg);
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('proses_pesanan');
+        $this->load->view('detail_barang', $data);
         $this->load->view('templates/footer');
     }
 

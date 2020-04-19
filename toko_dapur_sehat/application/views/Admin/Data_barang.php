@@ -12,7 +12,7 @@
     <th colspan="3">Aksi</th>
     </tr>
 
-    <?php 
+    <?php
     $no=1;
     foreach($barang as $brg) : ?>
         <tr>
@@ -25,7 +25,7 @@
 
         <td><div class="btn btn-primary btn-sm"><i class="fas fa-search-plus"></div></td>
         <td><?php echo anchor('Admin/Data_barang/edit/' .$brg->id_brg,'<div class="btn btn-success btn-sm"></i><i class="fa fa-edit"></i></div>')?></td>
-       
+
         <td><?php echo anchor('Admin/Data_barang/hapus/' .$brg->id_brg,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
         </tr>
 
@@ -47,7 +47,7 @@
       </div>
       <div class="modal-body">
         <form action="<?php echo base_url(). 'Admin/Data_barang/tambah_aksi'?>" method="post" enctype="multipart/form-data">
-            
+
             <div class="form-group">
             <label>Nama Barang</label>
             <input type="text" name="nama_brg" class="form-control">
@@ -60,7 +60,11 @@
 
             <div class="form-group">
             <label>Kategori</label>
-            <input type="text" name="kategori" class="form-control">
+            <select class="form-control" name="kategori">
+              <option>Food</option>
+              <option>Snack</option>
+              <option>Kitchen</option>
+            </select>
             </div>
 
             <div class="form-group">
@@ -79,9 +83,9 @@
             </div>
 
 
-            
 
-        
+
+
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-danger" data-dismiss="modal">Batalkan</button>

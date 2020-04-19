@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -36,8 +36,18 @@ class Model_barang extends CI_Model {
             return array();
         }
     }
+
+    public function detail_barang($id_brg)
+    {
+        $result =$this->db->where('id_brg', $id_brg)->get('tb_barang');
+        if($result->num_rows() > 0){
+            return $result->result();
+        } else{
+            return false;
+        }
+    }
 }
 
 /* End model_barang.php */
 
-?> 
+?>
