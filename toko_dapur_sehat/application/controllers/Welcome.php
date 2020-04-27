@@ -19,11 +19,7 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-    {
-        $data['barang'] = $this->Model_barang->tampil_data()->result();
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
-        $this->load->view('Dashboard', $data);
-        $this->load->view('templates/footer');
-    }
+	{
+		$this->load->view('welcome_message');
+	}
 }

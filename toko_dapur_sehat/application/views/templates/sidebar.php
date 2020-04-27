@@ -20,10 +20,10 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
 
-        <a class="nav-link" href="<?php echo base_url('Dashboard') ?>">
+        <a class="nav-link" href="<?php echo base_url('Dashboard_akhir') ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Beranda</span></a>
-          
+
       </li>
       </li>
       <li class="nav-item active">
@@ -43,26 +43,26 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?php echo base_url('Kategori/Snack')?>">
           <i class="fas fa-fw fa-cookie"></i>
           <span>Snack</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?php echo base_url('Kategori/Food')?>">
         <i class="fas fa-utensils"></i>
           <span>Food</span></a>
       </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?php echo base_url('Kategori/Kitchen')?>">
         <i class="fas fa-toolbox"></i>
           <span>Kitchen Need</span></a>
       </li>
 
-      
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -133,33 +133,27 @@
 
                 <?php echo anchor ('Dashboard/detail_keranjang', $keranjang) ?>
               </li>
+            </ul>
+            <div class="topbar-divider d-none d-sm-block"></div>
 
+            <ul class="na navbar-nav navbar-right">
+              <?php if($this->session->userdata('username')) { ?>
+              <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
+              <li class="ml-2"><?php echo anchor('Auth/logout','Logout'); ?></li>
+              <?php } else {?>
+              <li><?php echo anchor('Auth/login','Login'); ?></li>
+              <?php } ?>
             </ul>
             </div>
 
             <div class="navbar">
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                
+
                 </li>
               </ul>
             </div>
-
-            
-
-            
-
-            <div class="topbar-divider d-none d-sm-block"></div>
-
-            <ul class="na navbar-nav navbar-right">
-              <?php if($this->session->userdata('username')) { ?>
-                <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
-                <li class="ml-2"><?php echo anchor('auth/logout','Logout') ?></li>
-              <?php } else { ?>
-                <li class="ml-2"><?php echo anchor('auth/login','Login') ?></li>
-              <?php } ?>
-            </ul>
-        </div>
+          </ul>
 
         </nav>
              <!-- End of Topbar -->

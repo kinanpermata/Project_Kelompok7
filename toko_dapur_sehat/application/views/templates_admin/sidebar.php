@@ -27,7 +27,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-     
+
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
@@ -43,8 +43,8 @@
           <span>Invoice</span></a>
       </li>
 
-    
-      
+
+
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -106,21 +106,20 @@
               </div>
             </li>
 
-            
 
-            
+
+
 
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <ul class="na navbar-nav navbar-right">
               <?php if($this->session->userdata('username')) { ?>
-                <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
-                <li class="ml-2"><?php echo anchor('auth/logout','Logout') ?></li>
-              <?php } else { ?>
-                <li class="ml-2"><?php echo anchor('auth/login','Login') ?></li>
+              <li><div>Selamat Datang <?php echo $this->session->userdata('username') ?></div></li>
+              <li class="ml-2"><?php echo anchor('Auth/logout','Logout'); ?></li>
+              <?php } else {?>
+              <li><?php echo anchor('Auth/login','Login'); ?></li>
               <?php } ?>
             </ul>
-
           </ul>
 
         </nav>
