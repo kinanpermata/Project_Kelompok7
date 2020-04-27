@@ -68,6 +68,22 @@ class Dashboard extends CI_Controller {
         }
     }
 
+    public function dashboard_blog(){
+        $data['blog'] = $this->Model_blog->tampil_data()->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('data_blog', $data);
+        $this->load->view('templates/footer');
+    }
+    public function detail_blog($id_blog)
+    {
+        $data['blog'] = $this->Model_blog->detail_blog($id_blog);
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_blog', $data);
+        $this->load->view('templates/footer');
+    }
+
 }
 
 /* End of file Controllername.php */

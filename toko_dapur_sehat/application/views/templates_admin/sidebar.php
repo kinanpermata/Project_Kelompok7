@@ -43,6 +43,12 @@
           <span>Invoice</span></a>
       </li>
 
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('Admin/Data_blog') ?>">
+        <i class="fas fa-fw fa-blog"></i>
+          <span>Data Blog</span></a>
+      </li>
 
 
 

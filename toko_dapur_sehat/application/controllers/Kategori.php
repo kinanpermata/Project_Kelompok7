@@ -28,6 +28,24 @@ class Kategori extends CI_Controller {
         $this->load->view('kitchen', $data);
         $this->load->view('templates/footer');
     }
+
+    public function Info()
+    {
+        $data['Info'] = $this->Model_kategori->data_info()->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('info', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function Resep()
+    {
+        $data['Resep'] = $this->Model_kategori->data_resep()->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('resep', $data);
+        $this->load->view('templates/footer');
+    }
 }
 
 ?>
