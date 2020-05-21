@@ -27,7 +27,7 @@
       </li>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+      <a class="nav-link" href="<?php echo base_url('Dashboard/dashboard_blog') ?>">
           <i class="fas fa-fw fa-blog"></i>
           <span>Blog</span></a>
       </li>
@@ -37,7 +37,31 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Kategori
+        Mommy, You Know?
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('Kategori/Resep')?>">
+        <i class="fab fa-reddit"></i>
+          <span>Resep Masakan</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('Kategori/Info')?>">
+        <i class="fas fa-fw fa-baby"></i>
+          <span>Info Si Kecil</span></a>
+      </li>
+
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Our Product
       </div>
 
 
