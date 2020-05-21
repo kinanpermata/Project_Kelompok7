@@ -64,6 +64,7 @@
               <option>Food</option>
               <option>Snack</option>
               <option>Kitchen</option>
+              <option>Kids</option>
             </select>
             </div>
 

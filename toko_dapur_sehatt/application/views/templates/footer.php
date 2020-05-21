@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-md-4 mb-4 mb-md-0">
             <h3 class="footer-heading mb-4 text-white">About</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
-            <p><a href="#" class="btn btn-primary text-white px-4">Read More</a></p>
+            <p>Toko Dapur Sehat - MPASI & HEALTHY FOOD STORE</p>
+            
           </div>
           <div class="col-md-5 mb-4 mb-md-0 ml-auto">
             <div class="row mb-4">
@@ -21,13 +21,8 @@
                   </ul>
               </div>
               <div class="col-md-6">
-                <h3 class="footer-heading mb-4 text-white">Free Templates</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">HTML5 / CSS3</a></li>
-                    <li><a href="#">Clean Design</a></li>
-                    <li><a href="#">Responsive</a></li>
-                    <li><a href="#">Multi Purpose Template</a></li>
-                  </ul>
+               
+                  
               </div>
             </div>
 
@@ -49,10 +44,11 @@
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
                 <p>
-                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
+                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-whatsapp"> 085231660229</span></a>
+                  <BR></BR>
+                  <a href="https://www.instagram.com/dapursehat.id/?hl=id" class="p-2"><span class="icon-instagram"> @dapursehat.id</span></a>
+                  <BR></BR>
+                  <a href="#" class="p-2"><span class="icon-home"> Jl. Sudimoro, Dwiga Regency A5-15, Malang</span></a>
 
                 </p>
               </div>

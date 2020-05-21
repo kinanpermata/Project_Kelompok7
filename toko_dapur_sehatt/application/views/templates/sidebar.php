@@ -17,6 +17,7 @@
                         <li><a href="<?php echo base_url('Kategori/Snack')?>">Snack</a></li>
                         <li><a href="<?php echo base_url('Kategori/Food')?>">Food</a></li>
                         <li><a href="<?php echo base_url('Kategori/Kitchen')?>">Kitchen Needs</a></li>
+                        <li><a href="<?php echo base_url('Kategori/Kids')?>">Kids Care</a></li>
                       </ul>
                     </li>
                     <li class="has-children">

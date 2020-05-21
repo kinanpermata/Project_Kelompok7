@@ -14,7 +14,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
-              <h1 class="font-secondary font-weight-bold text-uppercase">Free Bootstrap 4 Templates</h1>
+              <h1 class="font-secondary font-weight-bold text-uppercase">Selamat Datang Di Dapur Sehat</h1>
             </div>
           </div>
         </div>

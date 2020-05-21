@@ -46,6 +46,15 @@ class Kategori extends CI_Controller {
         $this->load->view('resep', $data);
         $this->load->view('templates/footer');
     }
+
+    public function Kids()
+    {
+        $data['Kids'] = $this->Model_kategori->data_kids()->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('kids', $data);
+        $this->load->view('templates/footer');
+    }
 }
 
 ?>

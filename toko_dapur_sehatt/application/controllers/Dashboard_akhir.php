@@ -25,7 +25,7 @@ class Dashboard_akhir extends CI_Controller {
     public function detail($id_brg)
     {
         $data['barang'] = $this->Model_barang->detail_barang($id_brg);
-        $data['blog'] = $this->Model_blog->detail_blog($id_blog);
+       
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('detail_barang', $data);
