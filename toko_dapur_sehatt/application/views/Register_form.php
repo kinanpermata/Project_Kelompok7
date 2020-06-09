@@ -12,7 +12,7 @@
                 <h1 class="h4 text-gray-900 mb-4">Daftar Akun!</h1>
               </div>
               <?php echo $this->session->flashdata('pesan') ?>
-              <form method="POST" action="<?php echo base_url('Registrasi/')?>" class="user">
+              <form method="POST" action="<?php echo base_url('Registrasi/')?>" class="user" enctype="multipart/form-data">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" placeholder="Masukkan Nama Anda" name="nama">
                   <?php echo form_error('nama', '<div class="text-danger small ml-2">','</div>'); ?>
@@ -29,6 +29,21 @@
                   <div class="col-sm-6">
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Ulangi Password" name="password_2">
                     </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-user" placeholder="Masukkan Alamat" name="alamat">
+                  <?php echo form_error('alamat', '<div class="text-danger small ml-2">','</div>'); ?>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-user" placeholder="Masukkan Email" name="email">
+                  <?php echo form_error('email', '<div class="text-danger small ml-2">','</div>'); ?>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-user" placeholder="Masukkan No Telpon" name="notelp">
+                  <?php echo form_error('notelp', '<div class="text-danger small ml-2">','</div>'); ?>
+                </div>
+                <div class="form-group">
+                  <input type="file" name="gambar" class="form-control form-control-user"> 
                 </div>
                 <button type="submit" class="btn btn-primary btn-user btn-block">Daftar!</button>
               </form>

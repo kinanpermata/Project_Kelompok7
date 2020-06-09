@@ -10,7 +10,7 @@ class Dashboard_akhir extends CI_Controller {
         $data['blog'] = $this->Model_blog->tampil_data()->result();
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
-        $this->load->view('Dashboard', $data);
+        $this->load->view('dashboard', $data);
         $this->load->view('templates/footer');
     }
     public function Produk()
@@ -48,6 +48,13 @@ class Dashboard_akhir extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function contact()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('contact');
+        $this->load->view('templates/footer');
+    }
 }
 
 /* End of file Dashboard_akhir.php */

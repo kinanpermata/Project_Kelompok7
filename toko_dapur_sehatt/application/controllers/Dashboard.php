@@ -26,13 +26,11 @@ class Dashboard extends CI_Controller {
             'id'      => $barang->id_brg,
             'qty'     => 1,
             'price'   => $barang->harga,
-            'name'    => $barang->nama_brg
-
-    );
+            'name'    => $barang->nama_brg);
 
     $this->cart->insert($data);
 
-    redirect('Dashboard_akhir');
+    redirect('Dashboard/detail_keranjang');
 
     }
 
@@ -67,6 +65,90 @@ class Dashboard extends CI_Controller {
             echo "Maaf, Pesanan Anda Gagal diproses!";
         }
     }
+
+    public function transaksi()
+    {
+        $cus = $this->session->userdata('username');
+        $data['transaksi'] = $this->db->query("select * from tb_invoice cs 
+        where cs.nama='$cus' order by cs.id desc")->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('transaksi', $data);
+        $this->load->view('templates/footer');
+
+    }
+
+    public function detail_transaksi($id)
+    {
+        $cus = $this->session->userdata('username');
+        $data['transaksi']= $this->db->query("select * from tb_pesanan ps, tb_invoice cs 
+        where ps.id_invoice = $id 
+        and cs.nama='$cus'")->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_transaksi', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function profile()
+    {
+        $cus = $this->session->userdata('username');
+        $data['profile'] = $this->db->query("select * from tb_user us 
+        where us.username='$cus'")->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('profile', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function edit_profile($id)
+    {
+        $where = array('id' =>$id);
+        $data['profile'] = $this->Model_profile->edit_user($where, 'tb_user')->result();
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('edit_profile', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function update_profile(){
+            $id = $this->input->post('id');
+            $nama = $this->input->post('nama');
+            $username = $this->input->post('username');
+            $alamat = $this->input->post('alamat');
+            $notelp = $this->input->post('notelp');
+            $email = $this->input->post('email');
+            $gambar=$_FILES['gambar']['name'];
+            if ($gambar){
+                $config ['upload_path'] = './uploads';
+            $config ['allowed_types']='jpg|jpeg|png|gif';
+
+            $this->load->library('upload', $config);
+                if(!$this->upload->do_upload('gambar')){
+                    echo "Gambar Gagal Diupload! (Format Gambar:jpg/jpeg/png/gif)";
+                }else{
+                    $gambar=$this->upload->data('file_name');
+                }
+            }
+            
+            $data = array(
+                'nama' => $nama,
+                'username' => $username,
+                'alamat' => $alamat,
+                'notelp' => $notelp,
+                'email' => $email,
+                'gambar' => $gambar
+            );
+            $where = array(
+                'id' => $id
+            );
+            $this->Model_profile->update_user($where,$data,'tb_user');
+            
+            redirect('Dashboard/profile');
+    }   
 
     
 

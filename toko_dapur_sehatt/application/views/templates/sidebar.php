@@ -37,7 +37,7 @@
                         <div>Selamat Datang <?php echo $this->session->userdata('username') ?> </div>
                         <ul class="dropdown arrow-top">
                           <li><a href="<?php echo base_url('Dashboard/transaksi')?>">Transaksi</a></li>
-                          <li><a href="<?php echo base_url('Dashboard/edit_profil')?>">Edit Profile</a></li>
+                          <li><a href="<?php echo base_url('Dashboard/profile')?>">Profile</a></li>
                           <li><a href="<?php echo base_url('Auth/logout') ?>"><span class="d-inline-block bg-primary text-white btn btn-primary">Logout</span></a></li>
                         </ul>
                       </li>

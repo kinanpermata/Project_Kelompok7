@@ -20,7 +20,7 @@
             <form method="POST" action="<?php echo base_url() ?>.Dashboard/proses_pesanan">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control">
+                    <input type="text" name="nama" value="<?php echo $this->session->userdata('username') ?>" class="form-control" disabled>
                 </div>
 
                 <div class="form-group">
@@ -35,18 +35,20 @@
 
                 <div class="form-group">
                     <label>Jasa Pengiriman</label>
-                    <select class="form-control">
-                        <option>JNE</option>
-                        <option>GOJEK</option>
-                        <OPTION>GRAB</OPTION>
+                    <select class="form-control" name="jasa_pengiriman">
+                        <option value="">==Pilih Jasa Pengiriman==</option>
+                        <option value="0">JNE</option>
+                        <option value="1">GOJEK</option>
+                        <OPTION value="2">GRAB</OPTION>
                     </select>
                 </div>
-
+                
                 <div class="form-group">
                     <label>Pilih Bank </label>
-                    <select class="form-control">
-                        <option>BCA - 1234565432</option>
-                        <option>OVO - 123455432</option>
+                    <select class="form-control" name="bank">
+                        <option>==Pilih Bank==</option>
+                        <option value="0">BCA - 1234565432</option>
+                        <option value="1">OVO - 123455432</option>
                     </select>
                 </div>
 

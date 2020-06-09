@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 27, 2020 at 07:56 AM
+-- Generation Time: Jun 09, 2020 at 01:24 PM
 -- Server version: 8.0.18
 -- PHP Version: 5.6.39
 
@@ -45,11 +45,18 @@ CREATE TABLE `tb_barang` (
 INSERT INTO `tb_barang` (`id_brg`, `nama_brg`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`) VALUES
 (1, 'Abon', 'Abon Salmon by Nafisa', 'Food', 20000, 8, 'abonsalmonnafisa.jpg'),
 (2, 'Bebe Roll ', 'Bebe Roll Rasa Keju by Yummy Bites', 'Snack', 15000, 17, 'bb_keju.jpg'),
-(3, 'Bebe Roll', 'Bebe Roll Rasa Strawberry by Yummy Bites', 'Snack', 15000, 20, 'bb_strawberry.jpg'),
+(3, 'Bebe Roll', 'Bebe Roll Rasa Strawberry by Yummy Bites', 'Snack', 15000, 19, 'bb_strawberry.jpg'),
 (4, 'Bebe Roll', 'Bebe Roll Rasa Blueberry by Yummy BItes', 'Snack', 15000, 20, 'bb_blueberry.jpg'),
-(5, 'Abon', 'Abon Ayam Kampung by Nafisa ', 'Food', 20000, 10, 'IMG-20200215-WA0022.jpg'),
+(5, 'Abon', 'Abon Ayam Kampung by Nafisa ', 'Food', 20000, 9, 'IMG-20200215-WA0022.jpg'),
 (7, 'Sendok Garpu Sumpit Jerami ', 'Terbuat dari bahan plastik berkualitas (jerami gandum)-Warna yang tersedia : Pink,Biru,Hijau', 'Kitchen', 15000, 30, 'sendok.png'),
-(8, 'Sendok Takar 1 Set ', 'Sendok ukur Set Cantik-1 pcs 1 ml / gr,2.5 ml / gr,5 ml / gr, 7.5 ml / gr,15 ml / gr', 'Kitchen', 10000, 20, 'sendokset.png');
+(8, 'Sendok Takar 1 Set ', 'Sendok ukur Set Cantik-1 pcs 1 ml / gr,2.5 ml / gr,5 ml / gr, 7.5 ml / gr,15 ml / gr', 'Kitchen', 10000, 20, 'sendokset.png'),
+(12, 'Yummy Bites Cereal', 'Yummy Bites Cereal Multigrain Rasa Berries dan Apple', 'Food', 45000, 6, 'cereal.png'),
+(13, 'CESSA IMMUNE BOOSTER', 'Essential Oil - 8ml-untuk menjaga sistem kekebalan tubuh', 'Kids', 65000, 11, 'minyak-ungu.png'),
+(14, 'Cessa Fever Drop', 'Essential Oil-8ml-Untuk meredakan panas demam', 'Kids', 65000, 10, 'minyak-merah.png'),
+(15, 'CESSA LENIRE', 'Essential Oil-8ml-Untuk menenangkan saat si kecil rewel', 'Kids', 65000, 9, 'minyak-kuning.png'),
+(16, 'CESSA COUGH & FLU', 'Essential Oil - 8ml-untuk flu dan batuk', 'Kids', 65000, 10, 'minyak-biru.png'),
+(17, 'Piring  Mickey', 'Piring dengan bahan : Wheat + PP', 'Kitchen', 15000, 11, 'piring.png'),
+(21, 'Cereal Yummy Bites ', 'Yummy Bites Cereal Multigrain Rasa Pisang', 'Food', 20000, 10, 'cereal-pisang2.png');
 
 -- --------------------------------------------------------
 
@@ -79,7 +86,8 @@ INSERT INTO `tb_blog` (`id_blog`, `nama_blog`, `keterangan_blog`, `kategori_blog
 (9, 'Pancake Selai', 'PANCAKE PISANG SELAI BUAH NAGA Bahan:2 buah pisang (saya pkai pisang kepok)haluskan,1 butir telur,7 sdm tepung terigu,60 ml susu UHT. campurkan pisang yg sudah di haluskan dengan tepung terigu aduk rata lalu masukkan telur aduk lagi smpai semua tercampur rata. Masukkan susu UHT (untuk mengatur kekentalan) jngan terlalu encer dan jngan terlalu kenta.Panaskan teflon lalu masukkan adonan sebanyak 1 sendok sayur uk kecil....Ulangi smpai adonan habis.Bahan selai.1/4 buah naga(bleder lalu saring).1 1/2 sdt tepung maizena (cairkan dengan sedikit air).Sedikit yougurt plain untuk topping.masukkan buah naga ke dlm panci lalu tunggu smpai mendidih kemudian tambhkan tepung maizena aduk2 smpai mengental...sajikan di atas pancake... Jngan lupa sblm maem berdoa.', 'Resep', 'pancake1.png'),
 (10, 'Apa MPASI Pertama Untuk Si Kecil', 'Dari pertama kali si kecil MPASI, Buibu bisa memberikan empat kelompok makanan ini yaa..Tinggal disesuaikan saja teksturnya, misalnya untuk anak usia 6 bulan, teksturnya bisa berupa bubur halus, sedangkan untuk anak usia 8 bulan bisa dalam bentuk nasi tim. Bahan makanannya pun bisa disesuaikan dengan kondisi si kecil. Kalau anaknya sudah di diagnosa alergi ikan laut, produk susu, atau makanan lainnya, tentu bisa dieliminasi dan dicari alternatifnya sesuai dengan anjuran dokter', 'Info', 'jenis.png'),
 (11, 'Dimsum Ayam', 'Ini cemilan sekalian buat mami papinya ya di musim hujan tinggal cocol sm saos sambal duh enak banget. Dimsum Udang Ayam Bahan bahan 500 g daging ayam,aku pake bagian dada dan paha, 200 g udang kupas, Secukupnya kulit pangsit, 1/2 buah wortel serut, 2 butir telur kocok, 4 sdm maizena, 1 tangkai daun bawang iris halus, 1 1/2 sdt bawang putih bubuk, 1 sdm saus tiram, 1 sdt merica bubuk,Secukupnya gula pasir,Secukupnya garam. Cara membuat :1. Cuci Bersih semua bahan. 2. Cincang ayam dan udang,sy cincang pake chopper ( sisakan sedikitnudang untuk topingnya ). 3. Campur di wadah ayam,daun bawang,wortel dan bumbu lainnya aduk rata,tuang kocokan telur,aduk rata,masukan maizena aduk rata,koreksi rasanya. 4. Ambil 1 lembar kulit dimsum,isi dgn 1 sdm adonan,rekatkan sampingnya,lakukan hingga adonan hbs lalu beri toping 1 buah udang,bisa juga di kasih wortel parut,tabur dengan sedkit parsley kering,lalu kukus hingga matang.', 'Resep', 'dimsum.png'),
-(12, 'Sosis Kriwil', 'Hayoo siapa ni anaknya yg suka sm sosis,hehe Apalagi kalau d gulung sm mie gitu,pasti anak2 suka banget. Sosis Kriwul Bahan:5 buah sosis sapi(me merk Bernardi),2 bungkus Mie dari Promina (di ganti yg lain boleh),1sdm kecap,Minyak goreng. Cara membuat :1. Bagi sosis jd 2 bagian, di tiap ujung di belah,biar kalau d goreng mekar kayak bunga. 2. Rebus mie,tiriskan. .lalu campur dengan bumbu, tambahkan sedikit kecap. 3. Gulung mie di tengah sosis,lakukan sampai sosis habis. 4. Panaskan minyak lalu goreng,jangan d bolak balik biar mie nya ga ambyar', 'Resep', 'sosis.png');
+(12, 'Sosis Kriwil', 'Hayoo siapa ni anaknya yg suka sm sosis,hehe Apalagi kalau d gulung sm mie gitu,pasti anak2 suka banget. Sosis Kriwul Bahan:5 buah sosis sapi(me merk Bernardi),2 bungkus Mie dari Promina (di ganti yg lain boleh),1sdm kecap,Minyak goreng. Cara membuat :1. Bagi sosis jd 2 bagian, di tiap ujung di belah,biar kalau d goreng mekar kayak bunga. 2. Rebus mie,tiriskan. .lalu campur dengan bumbu, tambahkan sedikit kecap. 3. Gulung mie di tengah sosis,lakukan sampai sosis habis. 4. Panaskan minyak lalu goreng,jangan d bolak balik biar mie nya ga ambyar', 'Resep', 'sosis.png'),
+(15, 'Persiapkan ini saat si kecil mandi', 'Jangan bingung ya bunda saat si kecil mandi,siapkan ini segera', 'Info', 'mandi2.png');
 
 -- --------------------------------------------------------
 
@@ -92,20 +100,26 @@ CREATE TABLE `tb_invoice` (
   `nama` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `alamat` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tgl_pesan` datetime NOT NULL,
-  `batas_bayar` datetime NOT NULL
+  `batas_bayar` datetime NOT NULL,
+  `jasa_pengiriman` int(11) NOT NULL,
+  `bank` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_invoice`
 --
 
-INSERT INTO `tb_invoice` (`id`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`) VALUES
-(5, 'Kinanti', 'Jl. Kutilang', '2020-04-17 20:25:14', '2020-04-18 20:25:14'),
-(6, 'Kinan', 'Jl 1', '2020-04-18 18:57:02', '2020-04-19 18:57:02'),
-(7, 'Darin', 'Taman Bahagia No 21', '2020-04-18 19:48:06', '2020-04-19 19:48:06'),
-(8, 'Damila', 'Bahagia Selalu no 12', '2020-04-18 19:51:58', '2020-04-19 19:51:58'),
-(9, 'violet', 'Bandung no 56', '2020-04-18 19:53:26', '2020-04-19 19:53:26'),
-(10, 'Kinan Darin Millan', 'jalan soekarno hatta no 10', '2020-04-19 09:48:05', '2020-04-20 09:48:05');
+INSERT INTO `tb_invoice` (`id`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`, `jasa_pengiriman`, `bank`) VALUES
+(5, 'kinantipermata', 'Jl. Kutilang', '2020-04-17 20:25:14', '2020-04-18 20:25:14', 0, 0),
+(6, 'budiman', 'Jl 1', '2020-04-18 18:57:02', '2020-04-19 18:57:02', 0, 0),
+(7, 'Darin', 'Taman Bahagia No 21', '2020-04-18 19:48:06', '2020-04-19 19:48:06', 0, 0),
+(8, 'Damila', 'Bahagia Selalu no 12', '2020-04-18 19:51:58', '2020-04-19 19:51:58', 0, 0),
+(9, 'violet', 'Bandung no 56', '2020-04-18 19:53:26', '2020-04-19 19:53:26', 0, 0),
+(10, 'karinlan', 'jalan soekarno hatta no 10', '2020-04-19 09:48:05', '2020-04-20 09:48:05', 0, 0),
+(11, 'kinantipermata', 'Taman Bahagia No 21', '2020-06-09 10:40:32', '2020-06-10 10:40:32', 2, 1),
+(12, 'Dimasta', 'Taman Bahagia No 22', '2020-06-09 13:29:14', '2020-06-10 13:29:14', 1, 1),
+(13, 'icha', 'Taman Bahagia No 22', '2020-06-09 20:15:57', '2020-06-10 20:15:57', 2, 0),
+(14, 'icha', 'Semangat selalu no 13', '2020-06-09 20:17:15', '2020-06-10 20:17:15', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -135,7 +149,13 @@ INSERT INTO `tb_pesanan` (`id`, `id_invoice`, `id_brg`, `nama_brg`, `jumlah`, `h
 (8, 8, 1, 'Abon', 1, 20000, ''),
 (9, 9, 2, 'Bebe Roll ', 1, 15000, ''),
 (10, 10, 1, 'Abon', 1, 20000, ''),
-(11, 10, 2, 'Bebe Roll ', 2, 15000, '');
+(11, 10, 2, 'Bebe Roll ', 2, 15000, ''),
+(12, 11, 8, 'Sendok Takar 1 Set ', 1, 10000, ''),
+(13, 12, 4, 'Bebe Roll', 1, 15000, ''),
+(14, 12, 7, 'Sendok Garpu Sumpit Jerami ', 1, 15000, ''),
+(15, 13, 1, 'Abon', 1, 20000, ''),
+(16, 13, 8, 'Sendok Takar 1 Set ', 1, 10000, ''),
+(17, 14, 2, 'Bebe Roll ', 1, 15000, '');
 
 --
 -- Triggers `tb_pesanan`
@@ -159,19 +179,27 @@ CREATE TABLE `tb_user` (
   `nama` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `role_id` tinyint(1) NOT NULL
+  `role_id` tinyint(1) NOT NULL,
+  `alamat` varchar(120) COLLATE utf8mb4_general_ci NOT NULL,
+  `notelp` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `gambar` text CHARACTER SET utf8 COLLATE utf8_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tb_user`
 --
 
-INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `role_id`) VALUES
-(1, 'admin', 'admin', 'admin', 1),
-(5, 'Kinanti', 'kinanpermata', 'kinan', 2),
-(6, 'user', 'user', 'user', 2),
-(7, 'Budi', 'budiman', '123', 2),
-(8, 'kinan darin millan', 'karinlan', 'karinlan', 2);
+INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `role_id`, `alamat`, `notelp`, `email`, `gambar`) VALUES
+(1, 'admin', 'admin', 'admin', 1, '', '', '', ''),
+(5, 'Kinanti', 'kinantipermata', 'kinan', 2, 'Jl. Ketintang No.14 Surabaya', '089765593725', 'kinan@gmail.com', 'img_3.jpg'),
+(6, 'user', 'user', 'user', 2, '', '', '', ''),
+(8, 'kinan darin millan', 'karinlan', 'karinlan', 2, '', '', '', ''),
+(9, 'Dimas', 'Dimasta', '123', 2, 'Semangat selalu no 14', '089765593744', 'dimas@gmail.com', 'person_2.jpg'),
+(10, 'Arras', 'Arras', '123', 2, 'Bahagia Selalu no 12', '08765432197', 'arras@gmail.com', 'driver-4.jpg'),
+(11, 'alsa', 'alsa', '123', 2, 'Semangat selalu no 14', '08976548555', 'alsa@gmail.com', 'person.jpg'),
+(12, 'Budiman', 'budiman', '123', 2, 'Taman Bahagia No 21', '089765487557', 'budiman@gmail.com', 'person_2.jpg'),
+(13, 'icha', 'icha', '123', 2, 'sekawan wangi 14', '081637286428', 'ichaa@gmail.com', 'person_1.jpg');
 
 --
 -- Indexes for dumped tables
@@ -215,31 +243,31 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tb_blog`
 --
 ALTER TABLE `tb_blog`
-  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tb_invoice`
 --
 ALTER TABLE `tb_invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

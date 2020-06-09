@@ -56,7 +56,7 @@ class Data_barang extends CI_Controller {
 
         );
 
-        $this->Model_barang->tambah_barang($data, 'tb_barang');
+        $this->Model_barang->tambah_barang($data,'tb_barang');
         redirect('Admin/Data_barang/index');
 
     }
