@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/animate.css">    
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/animate.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/aos.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets_cus/css/style.css">
-    
+
   </head>
   <body>
-  
+
   <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
@@ -32,7 +32,7 @@
 
   <div class="site-wrap">
 
-    
+
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
@@ -42,4 +42,3 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
-      

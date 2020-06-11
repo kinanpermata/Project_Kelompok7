@@ -1,12 +1,12 @@
 <footer class="site-footer bg-dark">
       <div class="container">
-        
+
 
         <div class="row">
           <div class="col-md-4 mb-4 mb-md-0">
             <h3 class="footer-heading mb-4 text-white">About</h3>
             <p>Toko Dapur Sehat - MPASI & HEALTHY FOOD STORE</p>
-            
+
           </div>
           <div class="col-md-5 mb-4 mb-md-0 ml-auto">
             <div class="row mb-4">
@@ -21,8 +21,8 @@
                   </ul>
               </div>
               <div class="col-md-6">
-               
-                  
+
+
               </div>
             </div>
 
@@ -37,9 +37,9 @@
             </div>
           </div>
 
-          
+
           <div class="col-md-2">
-            
+
             <div class="row">
             <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
               <div class="col-md-12">
@@ -63,9 +63,9 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
 
-            
+
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -85,6 +85,6 @@
 
   <script src="<?php echo base_url()?>assets/assets_cus/js/main.js"></script>
 
-  
+
   </body>
 </html>

@@ -11,9 +11,9 @@ Class Invoice extends CI_Controller{
             <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-        
+
         redirect('Auth/login');
-        
+
         }
     }
     public function index(){
@@ -31,6 +31,13 @@ Class Invoice extends CI_Controller{
         $this->load->view('templates_admin/sidebar');
         $this->load->view('Admin/detail_invoice', $data);
         $this->load->view('templates_admin/footer');
+    }
+
+    public function hapus($id_invoice){
+        $where = array('id' => $id_invoice);
+        $this->Model_invoice->hapus_data($where, 'tb_invoice');
+
+        redirect('Admin/Invoice/index');
     }
 }
 

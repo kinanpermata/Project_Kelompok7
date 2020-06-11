@@ -29,7 +29,7 @@
 
                 </table>
 
-                <?php echo anchor('Dashboard_akhir/dashboard_blog/' .$blg->id_blog, '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
+                <?php echo anchor('Dashboard_akhir/Blog/' .$blg->id_blog, '<div class="btn btn-sm btn-danger">Kembali</div>') ?>
             </div>
         </div>
         <?php endforeach; ?>

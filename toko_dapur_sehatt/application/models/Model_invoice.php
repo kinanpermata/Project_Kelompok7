@@ -64,6 +64,11 @@ class Model_invoice extends CI_Model {
             return false;
         }
     }
+
+    public function hapus_data($where,$table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }
 
 ?>

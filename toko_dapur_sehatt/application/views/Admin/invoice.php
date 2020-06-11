@@ -8,7 +8,8 @@
             <th>Alamat Pengiriman</th>
             <th>Tanggal Pemesanan</th>
             <th>Batas Pembayaran</th>
-            <th>Aksi</th>
+            <th>Detail</th>
+            <th>Hapus</th>
         </tr>
 
         <?php foreach($invoice as $inv): ?>
@@ -19,6 +20,7 @@
             <td><?php echo $inv->tgl_pesan ?></td>
             <td><?php echo $inv->batas_bayar ?></td>
             <td><?php echo anchor('Admin/invoice/detail/'.$inv->id, '<div class="btn btn-sm btn-primary">Detail</div>') ?></td>
+            <td><?php echo anchor('Admin/invoice/hapus/'.$inv->id, '<div class="btn btn-sm btn-danger">Hapus</div>') ?></td>
         </tr>
 
         <?php endforeach ?>
